@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.example.registropersonas.databinding.ActivityMainBinding
 
 private lateinit var binding: ActivityMainBinding
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
