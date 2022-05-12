@@ -1,13 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Views.RegistroPersonas.RegistroPersonasFragment">
 
-    <TextView
+    //Text De id
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Imput_PersonaId"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_xwide"
 
-</FrameLayout>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtPersonaId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/personaId" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    //Text De nombre
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Imput_Nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_xwide"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Imput_PersonaId">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nombre" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    //Text de Email
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Imput_Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_xwide"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Imput_Nombre">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    //Salario
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Imput_Salario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_xwide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Imput_Email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtSalario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/salario" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    //Spinner
+    <Spinner
+        android:id="@+id/Spinnerocupaciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/ocupaciones"
+        android:layout_margin="@dimen/margin_xwide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Imput_Salario">
+
+    </Spinner>
+
+    //Boton Guardar
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGuardae"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_xwide"
+        android:text="@string/guardar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Spinnerocupaciones">
+        >
+
+    </com.google.android.material.button.MaterialButton>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

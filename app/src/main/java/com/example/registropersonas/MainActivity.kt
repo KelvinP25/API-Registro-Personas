@@ -6,6 +6,7 @@ import com.example.registropersonas.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 private lateinit var binding: ActivityMainBinding
+
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,4 +14,5 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
+
 }

@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">RegistroPersonas</string>
+    <string name="nombre">Ingrese su nombre</string>
+    <string name="personaId">Ingrese su Id</string>
+    <string name="email">Ingrese su E-mail</string>
+    <string name="ocupacion">Seleccione su Ocupacion</string>
+    <string name="salario">Ingrese su salario</string>
+    <string name="guardar">Guardar</string>
+
+    <string-array name="ocupaciones">
+        <item>Ingeniero</item>
+        <item>Abogado</item>
+        <item>Administrador</item>
+        <item>Contable</item>
+    </string-array>
 </resources>

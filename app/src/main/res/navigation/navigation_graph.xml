@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/listaPersonas">
+    app:startDestination="@id/RegistroPersonasFragment">
 
     <fragment
         android:id="@+id/listaPersonas"
@@ -12,10 +12,10 @@
         tools:layout="@layout/lista_personas_fragment" >
         <action
             android:id="@+id/action_to_registroPersonasFragment"
-            app:destination="@id/registroPersonasFragment" />
+            app:destination="@id/RegistroPersonasFragment" />
     </fragment>
     <fragment
-        android:id="@+id/registroPersonasFragment"
+        android:id="@+id/RegistroPersonasFragment"
         android:name="com.example.registropersonas.Views.RegistroPersonas.RegistroPersonasFragment"
         android:label="registro_personas_fragment"
         tools:layout="@layout/registro_personas_fragment" />
