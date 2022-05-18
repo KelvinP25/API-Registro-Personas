@@ -4,8 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Aplicada_2/RegistroPersonas/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/Aplicada_2/RegistroPersonas/app/src/main/res/layout/lista_personas_fragment.xml" value="0.11666666666666667" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/Aplicada_2/RegistroPersonas/app/src/main/res/layout/lista_personas_fragment.xml" value="0.264" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/Aplicada_2/RegistroPersonas/app/src/main/res/layout/registro_personas_fragment.xml" value="0.264" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/Aplicada_2/RegistroPersonas/app/src/main/res/layout/row_personas.xml" value="0.4346456692913386" />
       </map>
     </option>
   </component>

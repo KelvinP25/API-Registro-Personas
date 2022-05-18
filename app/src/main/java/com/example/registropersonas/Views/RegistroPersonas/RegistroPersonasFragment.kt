@@ -10,6 +10,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.navArgs
 import com.example.registropersonas.R
 import com.example.registropersonas.Utilities.getFloat
 import com.example.registropersonas.Utilities.getInt
@@ -27,14 +28,16 @@ class RegistroPersonasFragment : Fragment(), AdapterView.OnItemSelectedListener 
     private lateinit var binding: RegistroPersonasFragmentBinding
     private var spinner: Int = 0
 
+    private val args : RegistroPersonasFragmentArgs by navArgs()
+
+    private var personaId: Int =0
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = RegistroPersonasFragmentBinding.inflate(inflater, container, false)
-
+        LLenarCampos()
         binding.btnGuardae.setOnClickListener {
-
 
             viewModel.guardar(LLenar())
             val snackbar = Snackbar.make(binding.root, "Persona guardada", Snackbar.LENGTH_LONG).show()
@@ -43,6 +46,7 @@ class RegistroPersonasFragment : Fragment(), AdapterView.OnItemSelectedListener 
     }
 
     override fun onItemSelected(p0: AdapterView<*>?, p1: View?, position: Int, p3: Long) {
+        binding.Spinnerocupaciones.onItemSelectedListener = this
         spinner = position
     }
 
@@ -51,7 +55,7 @@ class RegistroPersonasFragment : Fragment(), AdapterView.OnItemSelectedListener 
     }
 
     fun LLenar(): Persona {
-        binding.Spinnerocupaciones.onItemSelectedListener = this
+
         val persona = Persona(
             binding.txtPersonaId.text.getInt(),
             binding.txtNombre.text.toString(),
@@ -60,6 +64,17 @@ class RegistroPersonasFragment : Fragment(), AdapterView.OnItemSelectedListener 
             binding.txtSalario.text.getFloat()
         )
         return persona
+    }
+
+    private fun LLenarCampos(){
+
+        val persona :Persona? = args.persona
+        persona?.let{
+            personaId = it.personaId
+            binding.txtNombre.setText(it.Nombre)
+            binding.txtEmail.setText(it.email)
+            binding.txtSalario.setText(it.salario.toString())
+        }
     }
 }
 

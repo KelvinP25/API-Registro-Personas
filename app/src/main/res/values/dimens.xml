@@ -2,4 +2,5 @@
 <resources>
     <dimen name="margin_wide">8dp</dimen>
     <dimen name="margin_xwide">16dp</dimen>
+    <dimen name="margin_swide">4dp</dimen>
 </resources>
